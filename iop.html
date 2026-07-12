@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saeed Mohamed Al-Zahri | Elite Frontend Developer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;600&display=swap');
+  body { font-family: 'Poppins', sans-serif; background: #050508; color: #fff; overflow-x: hidden; }
+  #bg-canvas { position: fixed; top: 0; left: 0; z-index: -1; }
+  .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+  .name-font { font-family: 'Orbitron', sans-serif; }
+  .gradient-text { background: linear-gradient(90deg, #00FFF7, #FF00E5, #FFD600); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: glow 3s ease-in-out infinite alternate; }
+  @keyframes glow { from { filter: drop-shadow(0 0 10px #00FFF7); } to { filter: drop-shadow(0 0 25px #FF00E5); } }
+  .btn-glow { background: linear-gradient(90deg, #00FFF7, #FF00E5); box-shadow: 0 0 30px rgba(0, 255, 247, 0.6); transition: all 0.4s; }
+  .btn-glow:hover { transform: scale(1.08); box-shadow: 0 0 50px rgba(255, 0, 229, 0.8); }
+  .modal { display: none; }
+  .modal.active { display: flex; animation: fadeIn 0.4s; }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+  .project-card { transition: transform 0.6s cubic-bezier(.2,.8,.2,1); transform-style: preserve-3d; }
+  .project-card:hover { transform: perspective(1000px) rotateY(-15deg) scale(1.08); }
+</style>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<!-- HERO SECTION HUGE -->
+<section class="min-h-screen flex items-center justify-center px-6 py-20">
+  <div class="max-w-7xl w-full grid md:grid-cols-3 gap-10 items-center">
+    
+    <!-- Left Text -->
+    <div class="text-right">
+      <h3 class="text-2xl font-light text-cyan-400 mb-4">I Create</h3>
+      <p class="text-gray-300 text-lg">High-end websites that convert visitors into customers. 3D, Fast, and Unforgettable. I specialize in React, Tailwind, and WebGL experiences.</p>
+    </div>
+
+    <!-- Center Image -->
+    <div class="flex justify-center">
+      <div class="relative">
+        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 blur-2xl opacity-70"></div>
+        <img src="WhatsApp Image 2026-07-04 at 3.36.25 AM.jpeg" alt="Saeed" class="relative w-72 h-72 rounded-full object-cover border-4 border-white shadow-2xl">
+      </div>
+    </div>
+
+    <!-- Right Text -->
+    <div class="text-left">
+      <h1 class="name-font text-5xl font-black mb-4"><span class="gradient-text">SAEED</span><br>AL-ZAHRI</h1>
+      <p class="text-gray-300 text-lg">Elite Frontend Developer from Egypt. Let's build your next big brand online. Available for freelance worldwide.</p>
+      <button onclick="openModal()" class="btn-glow mt-6 px-10 py-4 rounded-full text-lg font-bold text-black">Start Project</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT BIG -->
+<section class="py-24 px-6">
+  <div class="max-w-6xl mx-auto glass p-12 rounded-3xl">
+    <h2 class="name-font text-5xl font-bold mb-8 gradient-text">ABOUT ME</h2>
+    <p class="text-gray-300 text-xl mb-5">I'm Saeed Mohamed Al-Zahri. I don't build normal websites. I build digital experiences.</p>
+    <p class="text-gray-400 text-lg mb-5">With 4+ years of experience, I merge design, code, and 3D to create platforms that feel alive. Every animation has meaning. Every pixel is placed with purpose.</p>
+    <p class="text-gray-400 text-lg">My stack: React, Next.js, Three.js, GSAP, Tailwind. I deliver in 2 weeks, with lifetime support.</p>
+    <p class="text-cyan-400 text-lg mt-6">📞 Direct: 01221823684</p>
+  </div>
+</section>
+
+<!-- PORTFOLIO BIGGER -->
+<section class="py-24 px-6">
+  <h2 class="name-font text-5xl font-bold text-center mb-16 gradient-text">SELECTED WORKS</h2>
+  <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    <div class="glass p-8 rounded-3xl project-card h-96">
+      <div class="h-64 bg-gradient-to-br from-pink-500 via-red-500 to-orange-500 rounded-2xl mb-6"></div>
+      <h3 class="text-3xl font-bold mb-2">Luxury E-Commerce</h3>
+      <p class="text-gray-400 text-lg">3D Product Viewer + Smooth Checkout</p>
+    </div>
+    <div class="glass p-8 rounded-3xl project-card h-96">
+      <div class="h-64 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl mb-6"></div>
+      <h3 class="text-3xl font-bold mb-2">SaaS Dashboard</h3>
+      <p class="text-gray-400 text-lg">Glass UI + Real-time Charts</p>
+    </div>
+    <div class="glass p-8 rounded-3xl project-card h-96">
+      <div class="h-64 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-2xl mb-6"></div>
+      <h3 class="text-3xl font-bold mb-2">Brand Portfolio</h3>
+      <p class="text-gray-400 text-lg">Scroll Animations + 3D Hero</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT MODAL -> WHATSAPP -->
+<div id="contactModal" class="modal fixed inset-0 bg-black/90 backdrop-blur-lg justify-center items-center z-50">
+  <div class="glass p-10 rounded-3xl w-11/12 max-w-xl relative">
+    <button onclick="closeModal()" class="absolute top-4 right-6 text-4xl text-white">&times;</button>
+    <h2 class="name-font text-4xl font-bold mb-8 gradient-text">Let's Talk Business</h2>
+    <form id="whatsappForm">
+      <input id="name" type="text" placeholder="Your Name" required class="w-full p-4 mb-4 rounded-xl bg-black/40 border-gray-700 text-white">
+      <input id="phone" type="tel" placeholder="Your Phone Number" required class="w-full p-4 mb-4 rounded-xl bg-black/40 border-gray-700 text-white">
+      <input id="address" type="text" placeholder="Your Address" required class="w-full p-4 mb-4 rounded-xl bg-black/40 border-gray-700 text-white">
+      <select id="project" required class="w-full p-4 mb-6 rounded-xl bg-black/40 border-gray-700 text-white">
+        <option value="">Project Type</option>
+        <option>Online Store</option>
+        <option>Portfolio Website</option>
+        <option>Company Website</option>
+        <option>Landing Page</option>
+        <option>Web App</option>
+      </select>
+      <button type="submit" class="w-full btn-glow py-4 rounded-xl font-bold text-black text-xl">Send via WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<script>
+// THREE JS WHITE CELLS
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('bg-canvas'), alpha: true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+const group = new THREE.Group();
+for(let x=-5; x<=5; x++){
+  for(let y=-5; y<=5; y++){
+    const geo = new THREE.BoxGeometry(0.9,0.9,0.9);
+    const mat = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true, transparent: true, opacity: 0.15});
+    const cube = new THREE.Mesh(geo, mat);
+    cube.position.set(x, y, Math.random()*2-1);
+    group.add(cube);
+  }
+}
+scene.add(group);
+camera.position.z = 8;
+function animate(){
+  requestAnimationFrame(animate);
+  group.rotation.x += 0.001; group.rotation.y += 0.002;
+  renderer.render(scene, camera);
+}
+animate();
+
+// MODAL + WHATSAPP SEND
+function openModal(){ document.getElementById('contactModal').classList.add('active'); }
+function closeModal(){ document.getElementById('contactModal').classList.remove('active'); }
+
+document.getElementById('whatsappForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const address = document.getElementById('address').value;
+  const project = document.getElementById('project').value;
+  
+  const message = `New Project Request%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AProject: ${project}`;
+  const whatsappURL = `https://wa.me/201221823684?text=${message}`;
+  window.open(whatsappURL, '_blank');
+  closeModal();
+});
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body>
+</html>

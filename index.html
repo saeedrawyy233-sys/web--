@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مصنع تقطيع ليزر - دقة وجودة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="icon" href="bo.jpg">
+<meta name="direction" content="شركة كايرو استيل شركه متخصصه في اعمال القطاعات باليزر  مواسير حديد استيل ">
+<meta name="keyframes" content="مكن ليزر ,تقطيع ليزر,تنايه , ,كايرو استيل,اكشاك كهرباء,تقطيع مواسير">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif;}
+  body {background: #fff; color: #333;}
+  a {text-decoration: none;}
+
+  /* 1. الهيرو بالصورة */
+  .hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1170') center/cover no-repeat; /* غير الصورة دي */
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    position: relative; color: #fff;
+  }
+  .hero::after {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.55);}
+  .hero-content {position: relative; z-index: 2; padding: 20px; animation: fadeInUp 1s ease;}
+  .hero h1 {font-size: 3rem;width: 890px;margin-left: -30px;}
+  .hero p {font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin: auto;}
+  .btn-blue {
+    padding: 15px 45px; background: #0057ff; color: #fff; border: none; 
+    border-radius: 8px; font-size: 1.2rem; font-weight: 700; cursor: pointer;
+    transition: 0.3s; display: inline-block;
+  }
+  .btn-blue:hover {background: #003ecf; transform: translateY(-3px);}
+
+  /* 2. سكشن المشاكل بخلفية رمادي */
+  .problems {background: #f5f5f5; padding: 80px 20px; text-align: center;}
+  .problems h2 {font-size: 2.2rem; margin-bottom: 50px; color: #111;}
+  .cards {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1200px; margin: auto;}
+  .card {
+    background: #fff; padding: 30px 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    opacity: 0; transform: translateY(40px); transition: 0.8s;
+  }
+  .card.show {opacity: 1; transform: translateY(0);}
+  .card-icon {font-size: 2.5rem; margin-bottom: 15px; color: #0057ff;}
+  .card h3 {font-size: 1.2rem; color: #222;}
+
+  /* 3. سكشن الحلول */
+  .solutions {padding: 80px 20px; text-align: center;}
+  .solutions h2 {font-size: 2.2rem; margin-bottom: 50px; color: #111;}
+  .solutions-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: auto;}
+  .solution-item {
+    border-radius: 12px; overflow: hidden; opacity: 0; transform: scale(0.9); transition: 0.8s;
+  }
+  .solution-item.show {opacity: 1; transform: scale(1);}
+  .solution-item img {width: 100%; height: 250px; object-fit: cover; display: block;}
+  .solution-item p {padding: 15px; background: #fff; font-weight: 700;}
+
+  /* 4. ازرار الواتس والمكالمات الثابتة */
+  .fixed-buttons {position: fixed; bottom: 20px; z-index: 999;}
+  .whatsapp {right: 20px;}
+  .call {left: 20px;}
+  .fixed-buttons a {
+    display: flex; align-items: center; justify-content: center;
+    width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 28px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;
+  }
+  .whatsapp a {background: #25D366;}
+  .call a {background: #0057ff;}
+  .fixed-buttons a:hover {transform: scale(1.1);}
+      * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+ 
+
+    .why-us {
+      background: linear-gradient(135deg, #20272f 0%, #171d24 100%);
+      color: #fff;
+      padding: 70px 6%;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .why-us h2 {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .why-us .subtitle {
+      color: #c0bfae;
+      font-size: 18px;
+      margin-bottom: 55px;
+    }
+
+    .features {
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 45px;
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .icon {
+      width: 65px;
+      height: 65px;
+      margin-bottom: 22px;
+      color: #e07b08;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon svg {
+      width: 58px;
+      height: 58px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature h3 {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .feature p {
+      color: #1d548b;
+      font-size: 15px;
+      line-height: 2;
+      max-width: 270px;
+    }
+
+    @media (max-width: 900px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 25px;
+      }
+
+      .why-us h2 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .why-us {
+        padding: 50px 20px;
+      }
+
+      .why-us h2 {
+        font-size: 26px;
+      }
+
+      .why-us .subtitle {
+        font-size: 15px;
+        margin-bottom: 40px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+    }
+ 
+
+        .services {
+            width: 100%;
+            padding: 70px 6%;
+            text-align: center;
+        }
+
+        .services h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #767053;
+            margin-bottom: 65px;
+        }
+
+        .services-container {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+         }
+
+        .service {
+            width: 180px;
+            min-height: 190px;
+            padding: 25px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            background: #e6ebf5;
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #eeebe7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+
+        .icon span {
+            font-size: 34px;
+            color: #db8504;
+            line-height: 1;
+        }
+
+        .service h3 {
+            font-size: 18px;
+            line-height: 1.7;
+            font-weight: 500;
+            color: #778496a9;
+        }
+
+        /* العنصر المحدد في الصورة */
+        .service.active {
+            background: #415164;
+            min-height: 200px;
+        }
+
+        /* أيقونات بسيطة باستخدام CSS */
+        .factory::before {
+            content: "⌂";
+            font-size: 35px;
+        }
+
+        .panel::before {
+            content: "▦";
+            font-size: 36px;
+        }
+
+        .contract::before {
+            content: "▧";
+            font-size: 34px;
+        }
+
+        .machine::before {
+            content: "♧";
+            font-size: 34px;
+        }
+
+        .tools::before {
+            content: "⚙";
+            font-size: 32px;
+        }
+
+        .hammer::before {
+            content: "⚒";
+            font-size: 32px;
+        }
+
+        @media (max-width: 900px) {
+            .services {
+                padding: 50px 20px;
+            }
+
+            .services h1 {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            .services-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .service {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .services h1 {
+                font-size: 26px;
+            }
+
+            .service {
+                width: 145px;
+            }
+
+            .service h3 {
+                font-size: 15px;
+            }
+        }
+   
+
+      
+
+        .steps-section {
+            width: 100%;
+            padding: 80px 6%;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #4f5962;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #9a9a9a;
+            margin-bottom: 55px;
+        }
+
+        .steps-container {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .step-card {
+            background: rgb(255, 255, 255);
+            min-height: 315px;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+            transition: 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .number {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: #f3a16f;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .icon {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 43px;
+            color: #68737b;
+            margin-bottom: 15px;
+        }
+
+        .step-card h3 {
+            font-size: 21px;
+            color: #657078;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .step-card p {
+            font-size: 15px;
+            line-height: 2;
+            color: #999;
+        }
+
+        /* الموبايل */
+        @media (max-width: 900px) {
+            .steps-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .steps-section {
+                padding: 50px 20px;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .title {
+                font-size: 27px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+                margin-bottom: 35px;
+            }
+        }
+ 
+  @keyframes fadeInUp {from {opacity:0; transform: translateY(30px);} to {opacity:1; transform: translateY(0);}}
+</style>
+</head>
+<body>
+
+  <!-- 1. الهيرو -->
+  <section class="hero">
+    <div class="hero-content">
+        <h1>حلول صناعية معدنية متكاملة مصممة خصيصًا لمصنعك</h1><br>
+       <p>نقدم حلول تقطيع الليزر المعدني والاكريلك بأعلى معايير الجودة والسرعة في التنفيذ</p><br>
+      <a href="https://web.whatsapp.com/20 10 98869615" class="btn-blue">اطلب الان</a>
+    </div>
+  </section>
+ <br> <br>
+ <br> <br>
+
+  <!-- 2. المشاكل -->
+   <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواجه مشاكل من دي؟</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background: #fff;
+            color: #34495e;
+        }
+
+        .section {
+            min-height: 100vh;
+            padding: 90px 6%;
+            background: linear-gradient(
+                to bottom,
+                #ffffff 0%,
+                #ffffff 55%,
+                #f7f9fa 100%
+            );
+        }
+
+        .title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 55px;
+            color: #34495e;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fffdf5;
+            border: 1px solid #f0eee6;
+            border-radius: 12px;
+            min-height: 170px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px 15px;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.03);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .icon {
+            width: 52px;
+            height: 52px;
+            border: 3px solid #e7b78d;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #e7b78d;
+            font-size: 28px;
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+        .shield {
+            border-radius: 8px 8px 18px 18px;
+            width: 45px;
+            height: 52px;
+            position: relative;
+        }
+
+        .shield::before {
+            content: "!";
+            position: absolute;
+            top: 7px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #66727d;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        /* زر الاتصال */
+        .phone {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+
+            width: 62px;
+            height: 62px;
+
+            border-radius: 50%;
+            background: #c0660c;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        /* الموبايل */
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .title {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .section {
+                padding: 60px 20px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="section">
+
+        <h1 class="title">
+            بتواجه المشاكل دي
+         </h1><br><br>
+
+        <div class="cards">
+
+            <!-- الكارت الأول -->
+            <div class="card">
+                <div class="icon">!</div>
+                <h3>
+                    صعوبة التعامل مع مورد موثوق
+                </h3>
+            </div>
+
+            <!-- الكارت الثاني -->
+            <div class="card">
+                <div class="icon shield"></div>
+                <h3>
+                    ضعف جودة اللحام والتنظيف
+                </h3>
+            </div>
+
+            <!-- الكارت الثالث -->
+            <div class="card">
+                <div class="icon">×</div>
+                <h3>
+                    عدم الالتزام بالمواصفات الهندسية
+                </h3>
+            </div>
+
+            <!-- الكارت الرابع -->
+            <div class="card">
+                <div class="icon">◷</div>
+                <h3>
+                    تأخير في التسليم
+                </h3>
+            </div>
+
+        </div>
+
+    </section>
+
+   
+
+</body>
+</html>
+  <br>
+ <br>
+ <br>
+ <br>
+
+
+  <!-- 3. الحلول -->
+  <section class="solutions">
+    <h2>حلولنا الصناعيه</h2>
+    <div class="solutions-grid">
+      <div class="solution-item">
+        <img src="bnbn_files/photo-1635282760019-66a3ef07344b" alt="تقطيع معادن">
+        <p>تقطيع المعادن بدقة عالية</p>
+      </div>
+      <div class="solution-item">
+        <img src="bnbn_files/photo-1697281679290-ad7be1b10682" alt="تقطيع خشب">
+        <p>تقطيع الخشب والـ MDF</p>
+      </div>
+      <div class="solution-item">
+        <img src="bnbn_files/photo-1701448149957-b96dbd1926ff" alt="تقطيع اكريلك">
+        <p>تقطيع الاكريلك والبلاستيك</p>
+      </div>
+      <div class="solution-item">
+        <img src="bnbn_files/photo-1598302936664-407d6c250e2c" alt="حفر ليزر">
+        <p>الحفر والنقش بالليزر</p>
+      </div>
+    </div>
+ 
+ <br> <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+
+
+  <section class="why-us">
+
+    <h2>ليه تختار كايرو استيل لتنفيذ حلولك المعدنية؟</h2>
+
+    <p class="subtitle">
+      احنا بنفهم احتياجات المصانع والمشروعات الصناعية ونقدم حلول موثوقة ومخصصة
+    </p>
+
+    <div class="features">
+
+      <!-- الخبرة -->
+      <div class="feature">
+        <div class="icon">
+          <svg viewBox="0 0 64 64">
+            <circle cx="24" cy="18" r="8"></circle>
+            <circle cx="42" cy="20" r="7"></circle>
+            <path d="M10 48c0-10 6-16 14-16s14 6 14 16"></path>
+            <path d="M36 34c8-1 15 5 15 14"></path>
+          </svg>
+        </div>
+
+        <h3>خبرة في التعامل مع المصانع</h3>
+
+        <p>
+          سجل حافل في خدمة المصانع والمشروعات الكبرى
+        </p>
+      </div>
+
+
+      <!-- الجودة -->
+      <div class="feature">
+        <div class="icon">
+          <svg viewBox="0 0 64 64">
+            <path d="M32 7l19 7v15c0 13-8 23-19 28C21 52 13 42 13 29V14l19-7z"></path>
+            <path d="M24 31l6 6 11-13"></path>
+          </svg>
+        </div>
+
+        <h3>خامات صناعية معتمدة</h3>
+
+        <p>
+          استخدام مواد عالية الجودة معتمدة من أفضل الموردين
+        </p>
+      </div>
+
+
+      <!-- المواعيد -->
+      <div class="feature">
+        <div class="icon">
+          <svg viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="20"></circle>
+            <path d="M32 19v14l9 6"></path>
+          </svg>
+        </div>
+
+        <h3>التزام كامل بالمواعيد</h3>
+
+        <p>
+          تسليم المشاريع في المواعيد المحددة دون تأخير
+        </p>
+      </div>
+
+
+      <!-- الرسومات -->
+      <div class="feature">
+        <div class="icon">
+          <svg viewBox="0 0 64 64">
+            <path d="M17 6h24l10 10v42H17z"></path>
+            <path d="M41 6v11h11"></path>
+            <path d="M24 29h20"></path>
+            <path d="M24 37h20"></path>
+            <path d="M24 45h13"></path>
+          </svg>
+        </div>
+
+        <h3>تنفيذ طبقاً للرسومات الهندسية</h3>
+
+        <p>
+          التزام تام بالمخططات والمواصفات الفنية المطلوبة
+        </p>
+      </div>
+
+    </div>
+
+  </section> 
+<br><br><br><br>
+    
+
+    <section class="services">
+
+        <h1>بعض القطاعات التي نخدمها</h1>
+
+        <div class="services-container">
+
+            <div class="service">
+                <div class="icon">
+                    <span class="factory"></span>
+                </div>
+                <h3>مصانع إنتاج</h3>
+            </div>
+
+            <div class="service">
+                <div class="icon">
+                    <span class="panel"></span>
+                </div>
+                <h3>مصانع لوحات<br>كهرباء</h3>
+            </div>
+
+            <div class="service active">
+                <div class="icon">
+                    <span class="contract"></span>
+                </div>
+                <h3>شركات مقاولات</h3>
+            </div>
+
+            <div class="service">
+                <div class="icon">
+                    <span class="machine"></span>
+                </div>
+                <h3>مصانع الأجهزة<br>الكهربائية</h3>
+            </div>
+
+            <div class="service">
+                <div class="icon">
+                    <span class="tools"></span>
+                </div>
+                <h3>ورش ومصانع<br>خطوط إنتاج</h3>
+            </div>
+
+            <div class="service">
+                <div class="icon">
+                    <span class="hammer"></span>
+                </div>
+                <h3>تنفيذ المرافق<br>الإنشائية</h3>
+            </div>
+
+        </div>
+
+    </section>
+ 
+              <br><br><br><br>
+<section class="steps-section">
+
+    <h1 class="title">خطوات تنفيذ شغلك مع  كايرو استيل</h1>
+
+    <p class="subtitle">
+        عملية واضحة ومنظمة من البداية حتى التسليم النهائي
+    </p>
+
+    <div class="steps-container">
+
+        <!-- الخطوة 01 -->
+        <div class="step-card">
+
+            <div class="number">01</div>
+
+            <div class="icon">📄</div>
+
+            <h3>استلام الرسومات والمطلوبات</h3>
+
+            <p>
+                نستقبل المخططات الهندسية ونحدد احتياجاتك بدقة
+            </p>
+
+        </div>
+
+        <!-- الخطوة 02 -->
+        <div class="step-card">
+
+            <div class="number">02</div>
+
+            <div class="icon">⌕</div>
+
+            <h3>مراجعة هندسية وتسعير</h3>
+
+            <p>
+                يراجع فريقنا الهندسي جميع المخططات ويقدم عرض سعر تفصيلي
+            </p>
+
+        </div>
+
+        <!-- الخطوة 03 -->
+        <div class="step-card">
+
+            <div class="number">03</div>
+
+            <div class="icon">⚙</div>
+
+            <h3>بدء التصنيع</h3>
+
+            <p>
+                نبدأ عملية التصنيع بأحدث التقنيات والمعدات
+            </p>
+
+        </div>
+
+        <!-- الخطوة 04 -->
+        <div class="step-card">
+
+            <div class="number">04</div>
+
+            <div class="icon">◈</div>
+
+            <h3>تسليم نهائي مطابق للمواصفات</h3>
+
+            <p>
+                تسليم المنتج النهائي بجودة عالية ومطابق للمواصفات
+            </p>
+
+        </div>
+
+    </div>
+  
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Tahoma, sans-serif;
+        }
+
+        body {
+            background: #f7f8f5;
+            color: #4b5563;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 55px 20px;
+        }
+
+        .title {
+            text-align: center;
+            color: #333;
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 17px;
+            margin-bottom: 45px;
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 640px;
+            margin: auto;
+            background: #dce5ef;
+            padding: 34px;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: #4b5563;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        label .required {
+            color: #555;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            border: 1px solid #d0d7df;
+            background: #f8fafc;
+            border-radius: 7px;
+            padding: 14px 15px;
+            font-size: 15px;
+            color: #444;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input {
+            height: 48px;
+        }
+
+        textarea {
+            min-height: 115px;
+            resize: vertical;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #9aa3ad;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #324a64;
+            box-shadow: 0 0 0 2px rgba(150, 165, 180, 0.12);
+        }
+
+        .radio-title {
+            margin-bottom: 13px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .radio-item input {
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            width: 100%;
+            height: 52px;
+            border: none;
+            border-radius: 7px;
+            background: #b2b8be;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s;
+            margin-top: 5px;
+        }
+
+        .submit-btn:hover {
+            background: #8cb3dd;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px 15px;
+            }
+
+            .title {
+                font-size: 26px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+                margin-bottom: 30px;
+            }
+
+            .form-box {
+                padding: 23px 18px;
+            }
+        }
+    </style>
+ <br><br><br>
+
+    <div class="container">
+
+        <h1 class="title">تواصل معنا</h1>
+
+        <p class="subtitle">
+            املأ النموذج وسيتواصل معك أحد مهندسينا لمناقشة مشروعك
+        </p>
+
+        <form class="form-box" id="contactForm">
+
+            <!-- الاسم -->
+            <div class="form-group">
+                <label for="name">
+                    الاسم <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="أدخل اسمك الكامل"
+                    required
+                >
+            </div>
+
+            <!-- رقم الهاتف -->
+            <div class="form-group">
+                <label for="phone">
+                    رقم الهاتف <span class="required">*</span>
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="05xxxxxxxx"
+                    required
+                >
+            </div>
+
+            <!-- اسم المصنع -->
+            <div class="form-group">
+                <label for="factory">
+                    اسم المصنع
+                </label>
+
+                <input
+                    type="text"
+                    id="factory"
+                    placeholder="اسم المصنع (اختياري)"
+                >
+            </div>
+
+            <!-- الاحتياج -->
+            <div class="form-group">
+                <label for="need">
+                    أي الاحتياج المعني إلى محتاج تقدمه؟ <span class="required">*</span>
+                </label>
+
+                <textarea
+                    id="need"
+                    placeholder="اكتب تفاصيل احتياجك المعني"
+                    required
+                ></textarea>
+            </div>
+
+            <!-- الرسومات -->
+            <div class="form-group">
+
+                <label class="radio-title">
+                    هل لديك رسومات؟
+                </label>
+
+                <div class="radio-group">
+
+                    <label class="radio-item">
+                        <input type="radio" name="drawings" value="نعم">
+                        نعم
+                    </label>
+
+                    <label class="radio-item">
+                        <input type="radio" name="drawings" value="لا" checked>
+                        لا
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- زر الإرسال -->
+            <button type="submit" class="submit-btn">
+                إرسال الطلب عبر واتساب
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+            e.preventDefault();
+
+            // حط رقم الواتساب هنا
+            // اكتب كود الدولة بدون + أو مسافات
+            // مثال مصر: 201xxxxxxxxx
+            const whatsappNumber = "201098869615";
+
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const factory = document.getElementById("factory").value;
+            const need = document.getElementById("need").value;
+
+            const drawings =
+                document.querySelector('input[name="drawings"]:checked')?.value || "لم يتم التحديد";
+
+            const message =
+`السلام عليكم
+
+لدي طلب جديد:
+
+الاسم: ${name}
+
+رقم الهاتف: ${phone}
+
+اسم المصنع: ${factory || "غير مذكور"}
+
+الاحتياج:
+${need}
+
+هل لديه رسومات: ${drawings}
+`;
+
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                encodeURIComponent(message);
+
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
+ 
+</section>
+
+  </section>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+  <!-- الخط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome للأيقونات -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+ 
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      position: relative;
+      overflow: hidden;
+      min-height: 330px;
+
+      padding: 55px 8% 25px;
+
+      background:
+        radial-gradient(
+          circle at 50% 100%,
+          rgba(18, 139, 205, 0.48),
+          transparent 42%
+        ),
+        radial-gradient(
+          circle at 85% 60%,
+          rgba(25, 83, 125, 0.32),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #111820 0%,
+          #0b1620 48%,
+          #07111a 100%
+        );
+    }
+
+    /* الإضاءة الزرقاء أسفل الفوتر */
+
+    .footer::after {
+      content: "";
+
+      position: absolute;
+
+      left: -10%;
+      right: -10%;
+      bottom: -120px;
+
+      height: 260px;
+
+      background:
+        radial-gradient(
+          ellipse,
+          rgba(25, 151, 218, 0.55),
+          transparent 65%
+        );
+
+      pointer-events: none;
+    }
+
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 1200px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1.7fr;
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      text-align: right;
+    }
+
+    .about h2,
+    .follow h2 {
+      font-size: 22px;
+
+      font-weight: 800;
+
+      margin-bottom: 18px;
+    }
+
+    .about h2 {
+      color: white;
+    }
+
+    .about p {
+      max-width: 760px;
+
+      color: #eee;
+
+      font-size: 14px;
+
+      line-height: 2.1;
+
+      font-weight: 500;
+    }
+
+
+    /* =========================
+       FOLLOW
+    ========================= */
+
+    .follow {
+      text-align: right;
+    }
+
+    .follow h2 {
+      margin-bottom: 12px;
+    }
+
+    .follow p {
+      color: #f1f1f1;
+
+      font-size: 15px;
+
+      line-height: 1.9;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       SOCIAL ICONS
+    ========================= */
+
+    .social {
+      display: flex;
+
+      gap: 14px;
+
+      margin-top: 22px;
+
+      direction: ltr;
+    }
+
+    .social a {
+      width: 47px;
+      height: 47px;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+
+      text-decoration: none;
+
+      background: rgba(255,255,255,0.13);
+
+      border: 1px solid rgba(255,255,255,0.07);
+
+      backdrop-filter: blur(5px);
+
+      transition: 0.25s ease;
+    }
+
+    .social a:hover {
+      transform: translateY(-4px);
+
+      background: rgba(35,145,208,0.7);
+
+      box-shadow:
+        0 8px 25px rgba(0,150,230,0.25);
+    }
+
+    .social i {
+      font-size: 19px;
+    }
+
+
+    /* =========================
+       DIVIDER
+    ========================= */
+
+    .divider {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 1200px;
+
+      margin: 35px auto 0;
+
+      height: 1px;
+
+      background: rgba(255,255,255,0.16);
+    }
+
+
+    /* =========================
+       COPYRIGHT
+    ========================= */
+
+    .copyright {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 1200px;
+
+      margin: 32px auto 0;
+
+      text-align: center;
+
+      color: white;
+
+      font-size: 14px;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       CIRCLE
+    ========================= */
+
+    .floating-btn {
+      position: absolute;
+
+      left: 7%;
+
+      bottom: 50px;
+
+      width: 57px;
+      height: 57px;
+
+      border-radius: 50%;
+
+      background: white;
+
+      z-index: 3;
+
+      box-shadow:
+        0 5px 25px rgba(0,0,0,0.25);
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .footer {
+        padding: 45px 7% 25px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .about,
+      .follow {
+        text-align: center;
+      }
+
+      .social {
+        justify-content: center;
+      }
+
+      .floating-btn {
+        left: 25px;
+
+        bottom: 25px;
+      }
+
+      .copyright {
+        font-size: 12px;
+
+        line-height: 1.8;
+
+        padding: 0 10px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer class="footer">
+
+
+    <div class="footer-content">
+
+
+      <!-- نبذة عن الشركة -->
+
+      <section class="about">
+
+        <h2>
+          لماذا نحن؟
+        </h2>
+
+        <p>
+          مصنع  كايرو استيل للمستلزمات الصناعية، مصنع مصري بخبرة تمتد لأكثر من
+          20 عاماً في تقديم حلول متكاملة ومنتجات صناعية عالية الجودة.
+          نحرص على تقديم أفضل الحلول الهندسية والصناعية لعملائنا من خلال
+          فريق هندسي محترف وخبرة واسعة في تنفيذ المشروعات الصناعية
+          والتصميمات الهندسية المعتمدة.
+        </p>
+
+      </section>
+
+
+      <!-- تابعنا -->
+
+      <section class="follow">
+
+        <h2>
+          تابعنا على
+        </h2>
+
+        <p>
+          تابع أحدث أخبارنا ومنتجاتنا وعروضنا عبر صفحاتنا على مواقع التواصل الاجتماعي
+        </p>
+
+
+        <div class="social">
+
+
+          <!-- Facebook -->
+
+          <a href="https://www.facebook.com/share/19GTYrZg9b/?mibextid=wwXIfr" aria-label="Facebook">
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+          </a>
+
+
+          <!-- Instagram -->
+
+          <a href="https://www.facebook.com/share/19GTYrZg9b/?mibextid=wwXIfr" aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+          </a>
+
+
+          <!-- TikTok -->
+
+          <a href="https://www.facebook.com/share/19GTYrZg9b/?mibextid=wwXIfr" aria-label="TikTok">
+
+            <i class="fa-brands fa-tiktok"></i>
+
+          </a>
+
+
+          <!-- LinkedIn -->
+
+          <a href="https://www.facebook.com/share/19GTYrZg9b/?mibextid=wwXIfr" aria-label="LinkedIn">
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+          </a>
+
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+
+    <!-- الخط -->
+
+    <div class="divider"></div>
+
+
+    <!-- الحقوق -->
+
+    <div class="copyright">
+
+      جميع الحقوق محفوظة © 2025 | مصنع  كايرو استيل للمستلزمات الصناعية
+
+    </div>
+
+
+    <!-- الدائرة البيضاء -->
+
+    <div class="floating-btn"></div>
+
+
+  </footer>
+
+
+</body>
+</html>
+  <!-- 4. ازرار ثابتة -->
+  <div class="fixed-buttons whatsapp">
+    <a href="https://wa.me/201098869615" target="_blank">💬</a> <!-- حط رقمك -->
+  </div>
+  <div class="fixed-buttons call">
+    <a href="tel:201559696273">📞</a> <!-- حط رقمك -->
+  </div>
+
+<script>
+  // الانيميشن مع السكرول
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, {threshold: 0.2});
+
+  document.querySelectorAll('.card, .solution-item').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
